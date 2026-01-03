@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join our intensive 2-day AI Data Analytics workshop. Transform your skills and learn to leverage AI and data science for smarter, data-driven business decisions.">
+  <meta name="keywords" content="AI Data Analytics, Data Science Course, Business Intelligence, Machine Learning, Data Visualization, theLead.io, AI Workshop">
+  <meta name="author" content="theLead.io">
+  <title>AI for Data Analytics Workshop | theLead.io</title>
+  
+  <link rel="icon" href="https://thelead.io/wp-content/uploads/2020/04/cropped-lead-favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="https://thelead.io/wp-content/uploads/2020/04/cropped-lead-favicon-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://thelead.io/wp-content/uploads/2020/04/cropped-lead-favicon-192x192.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom styles to apply the Inter font and other enhancements */
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #f9fafb; /* bg-gray-50 */
+    }
+    .card-hover {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+    /* Style for the sticky nav to avoid content jump */
+    .sticky-nav-padding {
+        padding-top: 72px; /* Adjust this based on nav height */
+    }
+    /* Custom gradient for the new orange accent */
+    .bg-gradient-orange {
+        background-color: #FF644E;
+    }
+    /* Header background with an orange overlay */
+    .header-bg {
+        /* Using an orange overlay. RGB for #FF644E is 255, 100, 78 */
+        background-image: linear-gradient(to right, rgba(255, 100, 78, 0.9), rgba(239, 83, 80, 0.9)), url('https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+    }
+    /* Accordion styles */
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    /* Custom Color Classes */
+    .custom-orange-text { color: #FF644E; }
+    .custom-orange-bg { background-color: #FF644E; }
+    .custom-orange-border { border-color: #FF644E; }
+    .hover\:custom-orange-text:hover { color: #E55A46; }
+    .hover\:custom-orange-bg-dark:hover { background-color: #E55A46; }
+    .custom-orange-bg-light { background-color: #fff2ef; } /* Lighter shade for backgrounds */
+    .custom-orange-text-dark { color: #c0402e; } /* Darker shade for text */
+
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navigation Bar -->
+  <nav id="navbar" class="bg-gray-900/80 backdrop-blur-md text-white fixed top-0 left-0 right-0 z-50 shadow-lg">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center h-16">
+            <a href="https://www.thelead.io" target="_blank" rel="noopener noreferrer">
+              <img src="https://thelead.io/wp-content/uploads/2019/11/lead-white-logo.png" alt="theLead.io Logo" class="h-8 w-auto">
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#dates" class="hover:text-gray-300 transition-colors">Dates</a>
+                <a href="#syllabus" class="hover:text-gray-300 transition-colors">Syllabus</a>
+                <a href="#outcomes" class="hover:text-gray-300 transition-colors">Outcomes</a>
+                <a href="#trainers" class="hover:text-gray-300 transition-colors">Trainers</a>
+                <a href="#faq" class="hover:text-gray-300 transition-colors">FAQ</a>
+
+                <!-- Dropdown Menu -->
+                <div class="relative dropdown group">
+                    <button class="flex items-center hover:text-amber-300 transition-colors focus:outline-none py-4">
+                        More Programs <i data-lucide="chevron-down" class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="dropdown-menu hidden group-hover:block absolute left-0 top-full bg-white text-gray-800 rounded-lg shadow-xl py-2 w-48 border border-gray-100 z-50">
+                        <a href="http://n8n.thelead.io/" target="_blank" class="block px-4 py-2 hover:bg-gray-50 hover:text-blue-600 transition-colors">AI Agentic Automation</a>
+                        <a href="https://vibecoding.thelead.io/" target="_blank" class="block px-4 py-2 hover:bg-gray-50 hover:text-blue-600 transition-colors">AI Vibe Coding</a>
+                        <a href="https://aiengineering.thelead.io/" target="_blank" class="block px-4 py-2 hover:bg-gray-50 hover:text-blue-600 transition-colors">AI Engineering</a>
+                        <a href="http://aitrainer.thelead.io/" target="_blank" class="block px-4 py-2 hover:bg-gray-50 hover:text-blue-600 transition-colors">AI Trainer</a>
+                    </div>
+                </div>
+
+                <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="custom-orange-bg hover:custom-orange-bg-dark text-white px-4 py-2 rounded-md font-semibold transition-all">Register Now</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+        <a href="#dates" class="block hover:text-gray-300 transition-colors py-2">Dates</a>
+        <a href="#syllabus" class="block hover:text-gray-300 transition-colors py-2">Syllabus</a>
+        <a href="#outcomes" class="block hover:text-gray-300 transition-colors py-2">Outcomes</a>
+        <a href="#trainers" class="block hover:text-gray-300 transition-colors py-2">Trainers</a>
+        <a href="#faq" class="block hover:text-gray-300 transition-colors py-2">FAQ</a>
+        
+        <!-- Mobile Dropdown Items -->
+        <div class="border-t border-gray-700 mt-2 pt-2">
+            <p class="text-xs font-bold uppercase text-gray-500 mb-1">More Programs</p>
+            <a href="http://n8n.thelead.io/" target="_blank" class="block hover:text-amber-300 transition-colors py-2 text-sm">AI Agentic Automation</a>
+            <a href="https://vibecoding.thelead.io/" target="_blank" class="block hover:text-amber-300 transition-colors py-2 text-sm">AI Vibe Coding</a>
+            <a href="https://aiengineering.thelead.io/" target="_blank" class="block hover:text-amber-300 transition-colors py-2 text-sm">AI Engineering</a>
+            <a href="http://aitrainer.thelead.io/" target="_blank" class="block hover:text-amber-300 transition-colors py-2 text-sm">AI Trainer</a>
+        </div>
+
+        <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="block custom-orange-bg hover:custom-orange-bg-dark text-white px-4 py-2 rounded-md font-semibold transition-all text-center mt-2">Register Now</a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="header-bg text-white pt-32 pb-20 md:pt-40 md:pb-28 border-b-8 custom-orange-border">
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">
+        Master AI for Data Analytics: Transform Your Business in 2 Days
+      </h1>
+      <p class="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-8">
+        Gain critical AI and data science skills to drive smarter decisions, accelerate growth, and uncover the hidden opportunities in your data.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto bg-gray-900 text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:bg-gray-800 transition-all transform hover:scale-105">
+          Secure Your Seat
+        </a>
+        <a href="https://example.com/your-brochure-link.pdf" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto bg-transparent border-2 border-white text-white font-bold text-lg px-10 py-3 rounded-lg shadow-lg hover:bg-white hover:text-gray-900 transition-all transform hover:scale-105">
+          Download Brochure
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Trusted By Section -->
+  <section id="trusted-by" class="bg-gray-100 py-12">
+      <div class="container mx-auto px-6">
+          <h3 class="text-center text-gray-600 text-sm font-bold uppercase tracking-wider mb-8">Powering industry leaders with future-ready skills</h3>
+          <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-8">
+              <img src="https://asset.brandfetch.io/idSUi3_8n5/id50s9j_7Y.svg" alt="HongLeong Bank Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Sunway_logo.png" alt="Sunway Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://cdn.brandfetch.io/idBvD8kBit/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667603006186" alt="Shell Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/27/Tenaga_Nasional_Logo.svg/250px-Tenaga_Nasional_Logo.svg.png" alt="Tenaga Nasional Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Microsoft_logo.svg/2560px-Microsoft_logo.svg.png" alt="Microsoft Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/MDEC_logo.png" alt="MDEC Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Employees_Provident_Fund_%28Malaysia%29_logo.svg/1200px-Employees_Provident_Fund_%28Malaysia%29_logo.svg.png" alt="EPF Logo" class="h-8 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+          </div>
+      </div>
+    </section>
+
+  <main class="bg-gray-50">
+    <div class="container mx-auto px-6 py-12 md:py-20">
+
+      <!-- Dates Section -->
+      <section id="dates" class="mb-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Choose Your Workshop Date</h2>
+            <p class="text-gray-600 mt-2">Seats are limited and fill up fast. Book now to guarantee your spot.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-white p-6 rounded-xl shadow-lg border-2 custom-orange-border transform hover:scale-105 transition-transform duration-300 md:col-span-2">
+                <div class="text-center">
+                    <p class="text-lg font-semibold text-gray-500">7-8 February, 2026</p>
+                    <p class="font-bold text-2xl text-gray-800 mb-1">Saturday & Sunday</p>
+                    <p class="text-lg text-gray-600 mb-4 font-medium">WORQ Subang</p>
+                    
+                    <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
+                        <div class="custom-orange-bg h-4 rounded-full" style="width: 10%"></div>
+                    </div>
+                    <div class="flex justify-between items-center text-sm mb-4">
+                        <p class="font-bold custom-orange-text flex items-center"><i data-lucide="calendar-plus" class="w-4 h-4 mr-1"></i>Registration Open!</p>
+                        <p class="text-gray-500">Early bird pricing available</p>
+                    </div>
+
+                    <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="inline-block w-full custom-orange-bg hover:custom-orange-bg-dark text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all">
+                        Book Now & Save
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
+    
+      <!-- Main Content Grid -->
+      <div class="grid lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2 space-y-12">
+
+          <!-- Who Should Attend Section -->
+          <section id="who-should-attend" class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 card-hover">
+             <div class="grid md:grid-cols-2 gap-8 items-center">
+               <div>
+                   <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="users" class="w-7 h-7 mr-3 custom-orange-text"></i>Who Will Benefit Most?</h2>
+                   <p class="mb-4 text-gray-600">This intensive workshop is designed for forward-thinking professionals and leaders who want to translate data into a strategic asset.</p>
+                   <ul class="space-y-3">
+                     <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-green-500 mt-1 flex-shrink-0"></i><span><strong>Business Analysts</strong> ready to evolve from reporting to predictive, AI-driven insights.</span></li>
+                     <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-green-500 mt-1 flex-shrink-0"></i><span><strong>Finance Professionals</strong> aiming to build robust forecasting models and optimize financial performance.</span></li>
+                     <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-green-500 mt-1 flex-shrink-0"></i><span><strong>Marketers</strong> determined to leverage data for hyper-personalized campaigns and superior customer intelligence.</span></li>
+                     <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-green-500 mt-1 flex-shrink-0"></i><span><strong>Executives & Managers</strong> tasked with building a data-driven culture and strategic vision.</span></li>
+                   </ul>
+               </div>
+               <div class="hidden md:block">
+                   <img src="https://thelead.io/wp-content/uploads/2020/07/Web-development-illustration-1march-july-06.png" alt="Data Analytics Illustration" class="rounded-lg object-cover h-full w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EFEFEF/333333?text=Illustration';">
+               </div>
+             </div>
+          </section>
+
+          <!-- Syllabus Section -->
+          <section id="syllabus" class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 card-hover">
+            <h2 class="text-2xl font-bold mb-4 flex items-center"><i data-lucide="book-open-check" class="w-7 h-7 mr-3 custom-orange-text"></i>A Hands-On Journey into AI</h2>
+            <p class="text-gray-600 mb-6">Our syllabus takes you from core fundamentals to advanced AI applications in just two days. No theory-only lectures—you'll be building and applying from day one.</p>
+            <div class="space-y-6">
+                <div class="custom-orange-bg-light border-l-4 custom-orange-border p-6 rounded-r-lg">
+                    <h3 class="font-bold text-lg custom-orange-text-dark mb-2">Day 1: Mastering Data Fundamentals</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>The Modern Data Scientist's Workflow:</strong> Master the end-to-end process from question to insight.</li>
+                        <li><strong>Advanced Data Handling:</strong> Automate ETL, cleanse messy data, and integrate sources like CSV & Excel.</li>
+                        <li><strong>Database & SQL Mastery:</strong> Go beyond basic queries to architect and script relational databases.</li>
+                        <li><strong>Intelligent Web Data Collection:</strong> Ethically scrape websites and harness APIs for unique datasets.</li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                    <h3 class="font-bold text-lg text-green-800 mb-2">Day 2: AI-Powered Analytics & Strategy</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>Practical Machine Learning:</strong> Implement Supervised and Unsupervised Learning models for prediction and clustering.</li>
+                        <li><strong>Text & Sentiment Analytics:</strong> Unlock insights from customer reviews, reports, and social media.</li>
+                        <li><strong>Applied AI & Neural Networks:</strong> Understand and apply deep learning concepts to solve real-world problems.</li>
+                        <li><strong>Executive Data Storytelling:</strong> Craft compelling narratives and visualizations that drive action and build your professional portfolio.</li>
+                    </ul>
+                </div>
+            </div>
+          </section>
+          
+          <!-- Trainers Section -->
+          <section id="trainers" class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 card-hover">
+            <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="graduation-cap" class="w-7 h-7 mr-3 custom-orange-text"></i>Learn from Industry Architects</h2>
+            <div class="space-y-8">
+                <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <img src="https://pbs.twimg.com/profile_images/738570826291646464/EEH1StZS_400x400.jpg" alt="Assoc. Prof. Dr. Lau Cher Han" class="rounded-full w-24 h-24 border-4 border-gray-200 object-cover flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/96x96/EFEFEF/333333?text=Dr+Lau';">
+                    <div>
+                        <h3 class="font-semibold text-xl text-center sm:text-left text-gray-800">Assoc. Prof. Dr. Lau Cher Han</h3>
+                        <p class="text-gray-600 text-center sm:text-left">Chief Data Scientist & CEO of LEAD. A PhD holder and Johor State Big Data Advisor, Dr. Lau has consulted for global giants like Intel, Shell, and Dell, and has trained over 10,000 professionals in data science.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <img src="https://thelead.io/wp-content/uploads/2020/08/edmund-crop.png" alt="Edmund Hee" class="rounded-full w-24 h-24 border-4 border-gray-200 object-cover flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/96x96/EFEFEF/333333?text=Edmund';">
+                    <div>
+                        <h3 class="font-semibold text-xl text-center sm:text-left text-gray-800">Edmund Hee</h3>
+                        <p class="text-gray-600 text-center sm:text-left">Chief Data & AI Officer at LEAD. A former Senior Data Scientist at AirAsia and tech co-founder, Edmund is an expert in implementing enterprise-level machine learning and AI solutions.</p>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1 space-y-8 lg:sticky lg:top-24 self-start">
+          <div id="outcomes" class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 card-hover">
+              <h3 class="text-xl font-bold mb-4 flex items-center"><i data-lucide="rocket" class="w-6 h-6 mr-3 custom-orange-text"></i>Key Capabilities You'll Gain</h3>
+              <ul class="space-y-3 text-gray-600">
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Master the AI Landscape:</strong> Go beyond buzzwords to command an understanding of modern AI and big data.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Automate Intelligence:</strong> Design and build data pipelines and ML models to automate complex analysis.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Harness Language AI:</strong> Extract actionable intelligence from text using Natural Language Processing (NLP).</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Predict the Future:</strong> Apply predictive analytics and AI-powered forecasting to anticipate market trends.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Create Personalized Content:</strong> Leverage data-driven insights to produce hyper-personalized business content.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Operationalize Data Science:</strong> Develop a strategic framework to embed data science across your organization.</span></li>
+              </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 card-hover">
+              <h3 class="text-xl font-bold mb-4 flex items-center"><i data-lucide="building-2" class="w-6 h-6 mr-3 custom-orange-text"></i>Your Organization's ROI</h3>
+              <ul class="space-y-3 text-gray-600">
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Build a Lasting Competitive Edge:</strong> Equip your team to innovate and outperform in the age of AI.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Drive ROI-Focused Decisions:</strong> Move from intuition to data-backed strategies that improve efficiency and profit.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Future-Proof Your Workforce:</strong> Cultivate in-house talent to solve your unique business challenges.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 custom-orange-text mt-1 flex-shrink-0"></i><span><strong>Seamlessly Integrate AI:</strong> Learn to embed predictive models directly into your existing systems (CRM, ERP).</span></li>
+              </ul>
+          </div>
+        </aside>
+      </div>
+
+    
+      <section id="video-testimonials" class="mt-20">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Hear From Our Participants</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Embedded Facebook Video 1 -->
+            <div class="aspect-[9/16] bg-black rounded-xl shadow-lg flex items-center justify-center card-hover overflow-hidden">
+                <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F739734685168860%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            </div>
+            <!-- Embedded Facebook Video 2 -->
+            <div class="aspect-[9/16] bg-black rounded-xl shadow-lg flex items-center justify-center card-hover overflow-hidden">
+                <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fthelead.io%2Fvideos%2F1118334936777034%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            </div>
+            <!-- Embedded Facebook Video 3 -->
+            <div class="aspect-[9/16] bg-black rounded-xl shadow-lg flex items-center justify-center card-hover overflow-hidden">
+                <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1250093550465260%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="mt-20">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Glimpses from Our Workshops</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                <img src="https://github.com/drhanlau/n8n-course/blob/main/501008480_1271616571636352_1045940269974980193_n.jpg?raw=true" alt="Past workshop photo 1" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                <img src="https://github.com/drhanlau/n8n-course/blob/main/516791714_1309874321143910_2384036856029643188_n.jpg?raw=true" alt="Past workshop photo 2" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                <img src="https://raw.githubusercontent.com/drhanlau/n8n-course/refs/heads/main/photo-1552664730-d307ca884978.avif" alt="Past workshop photo 3" class="w-full h-full object-cover">
+            </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="mt-20">
+        <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 card-hover">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Your Questions, Answered</h2>
+          <div class="max-w-3xl mx-auto space-y-4" id="faq-accordion">
+
+            <div class="border-b border-gray-200 py-4">
+              <button class="accordion-header w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 hover:custom-orange-text focus:outline-none">
+                <span>Are there any prerequisites for this course?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform transform"></i>
+              </button>
+              <div class="accordion-content mt-2 text-gray-600">
+                <p>This course is designed for professionals from all backgrounds. While basic familiarity with data concepts is helpful, the only true requirements are a strong curiosity about AI's business impact and a readiness to learn.</p>
+              </div>
+            </div>
+
+            <div class="border-b border-gray-200 py-4">
+              <button class="accordion-header w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 hover:custom-orange-text focus:outline-none">
+                <span>What specific technologies will we use?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform transform"></i>
+              </button>
+              <div class="accordion-content mt-2 text-gray-600">
+                <p class="mb-2">We focus on a modern, powerful, and accessible toolset that you can apply immediately:</p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>Core Language:</strong> Python (The industry standard for data science)</li>
+                    <li><strong>BI & Visualization:</strong> Microsoft Power BI</li>
+                    <li><strong>Data & Cloud Platforms:</strong> Firebase, Google BigQuery</li>
+                    <li><strong>Low-Code Analytics & ML:</strong> Knime</li>
+                    <li><strong>Generative AI:</strong> Hands-on with models like ChatGPT & DeepSeek</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="border-b border-gray-200 py-4">
+              <button class="accordion-header w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 hover:custom-orange-text focus:outline-none">
+                <span>Will I have projects for my portfolio?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform transform"></i>
+              </button>
+              <div class="accordion-content mt-2 text-gray-600">
+                <p>Absolutely. A key outcome of this workshop is not just learning, but doing. You will leave with practical projects and a framework for building a data science portfolio that showcases your new capabilities to employers and stakeholders.</p>
+              </div>
+            </div>
+
+            <div class="py-4">
+              <button class="accordion-header w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 hover:custom-orange-text focus:outline-none">
+                <span>Is this course HRD Corp claimable?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform transform"></i>
+              </button>
+              <div class="accordion-content mt-2 text-gray-600">
+                <p>Yes, this program is 100% HRD Corp-claimable for all eligible Malaysian companies. We can assist with the necessary documentation.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA Section -->
+      <section id="register" class="mt-20 text-center bg-gray-800 text-white rounded-xl p-10 md:p-16 shadow-2xl bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        <div class="relative z-10">
+          <h2 class="text-4xl font-extrabold mb-4">Your Data Holds the Key. It's Time to Unlock It.</h2>
+          <p class="text-lg text-gray-300 mb-2">Register now to secure your spot for 7-8 February 2026.</p>
+          <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-orange text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+            Register and Transform Your Career
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="container mx-auto px-6 py-12 text-center">
+      <div class="mb-10 p-6 bg-gray-800/50 rounded-xl border border-gray-700 max-w-2xl mx-auto">
+        <h4 class="text-white font-bold text-xl mb-4">Course Rates</h4>
+        <div class="grid sm:grid-cols-2 gap-4 text-lg">
+          <div class="p-4 bg-gray-900/50 rounded-lg">
+            <p class="text-sm uppercase tracking-wider text-gray-500 font-bold mb-1">HRDC Rate</p>
+            <p class="text-white font-bold text-2xl">RM3,500 <span class="text-sm font-normal text-gray-400">+SST</span></p>
+          </div>
+          <div class="p-4 bg-gray-900/50 rounded-lg">
+            <p class="text-sm uppercase tracking-wider text-gray-500 font-bold mb-1">Non-HRDC Rate</p>
+            <p class="text-white font-bold text-2xl">RM2,900 <span class="text-sm font-normal text-gray-400">+SST</span></p>
+          </div>
+        </div>
+        <p class="mt-6 text-sm text-gray-300 leading-relaxed italic">
+          Your investment includes the 2-day intensive workshop, all materials, certification, and 3 months of post-workshop support.
+        </p>
+      </div>
+
+      <p class="mb-4">A transformative learning experience by <strong>theLead.io</strong></p>
+      <p>For inquiries, contact us at: <a href="mailto:chelsea@thelead.io" class="custom-orange-text hover:custom-orange-text">chelsea@thelead.io</a></p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+        <path d="M16.604 13.444c-.27-.135-.636-.316-1.002-.497-.366-.181-.606-.271-.787-.271-.181 0-.362.09-.543.271l-.452.543c-.271.362-.543.632-.724.813-.181.181-.362.271-.632.271-.271 0-.543-.09-.724-.271-.181-.181-.9-1.084-2.168-2.348-1.267-1.267-2.167-2.078-2.348-2.168-.181-.181-.271-.452-.271-.724 0-.271.09-.543.271-.632.181-.181.452-.362.813-.724l.543-.452c.181-.181.271-.362.271-.543s-.09-.362-.271-.787c-.181-.366-.316-.732-.497-1.002-.181-.271-.362-.452-.632-.452h-.813c-.362 0-.724.181-1.002.543-.271.362-.452.724-.452 1.002 0 .362.181.724.452 1.18l.271.452c.813 1.446 2.078 2.979 3.794 4.512 1.715 1.533 3.069 2.709 4.512 3.794l.452.271c.452.271.813.452 1.18.452.271 0 .632-.181 1.002-.452.362-.271.543-.632.543-1.002v-.813c0-.271-.181-.452-.452-.632Z M12 2.04c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10Z"/>
+      </svg>
+  </a>
+
+  <!-- JavaScript for interactivity -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuButton && mobileMenu) {
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+      }
+
+      // Accordion functionality
+      const accordionHeaders = document.querySelectorAll('.accordion-header');
+      accordionHeaders.forEach(header => {
+          header.addEventListener('click', () => {
+              const content = header.nextElementSibling;
+              const icon = header.querySelector('svg');
+
+              if (!content || !icon) return;
+
+              const isOpening = !content.style.maxHeight;
+
+              // Close all other open accordions
+              document.querySelectorAll('.accordion-content').forEach(item => {
+                  if (item !== content) {
+                      item.style.maxHeight = null;
+                      const otherIcon = item.previousElementSibling.querySelector('svg');
+                      if (otherIcon) {
+                          otherIcon.classList.remove('rotate-180');
+                      }
+                  }
+              });
+
+              // Toggle the clicked accordion
+              if (isOpening) {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                  icon.classList.add('rotate-180');
+              } else {
+                  content.style.maxHeight = null;
+                  icon.classList.remove('rotate-180');
+              }
+          });
+      });
+    });
+  </script>
+</body>
+</html>
