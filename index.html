@@ -65,6 +65,20 @@
     .custom-orange-bg-light { background-color: #fff2ef; } /* Lighter shade for backgrounds */
     .custom-orange-text-dark { color: #c0402e; } /* Darker shade for text */
 
+    /* Animation for the moving ribbon */
+    @keyframes scrollTicker {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-ticker {
+        display: flex;
+        width: max-content;
+        animation: scrollTicker 30s linear infinite;
+    }
+    .animate-ticker:hover {
+        animation-play-state: paused;
+    }
+
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -149,21 +163,57 @@
       </div>
     </div>
   </header>
-  
-  <!-- Trusted By Section -->
-  <section id="trusted-by" class="bg-gray-100 py-12">
-      <div class="container mx-auto px-6">
-          <h3 class="text-center text-gray-600 text-sm font-bold uppercase tracking-wider mb-8">Powering industry leaders with future-ready skills</h3>
-          <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-8">
-              <img src="https://asset.brandfetch.io/idSUi3_8n5/id50s9j_7Y.svg" alt="HongLeong Bank Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
-              <img src="https://cdn.brandfetch.io/idBvD8kBit/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667603006186" alt="Shell Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/27/Tenaga_Nasional_Logo.svg/250px-Tenaga_Nasional_Logo.svg.png" alt="Tenaga Nasional Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Microsoft_logo.svg/2560px-Microsoft_logo.svg.png" alt="Microsoft Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/MDEC_logo.png" alt="MDEC Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Employees_Provident_Fund_%28Malaysia%29_logo.svg/1200px-Employees_Provident_Fund_%28Malaysia%29_logo.svg.png" alt="EPF Logo" class="h-8 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+
+  <!-- Moving Ribbon Section -->
+  <div class="bg-gray-900 border-b border-gray-800 overflow-hidden py-4 shadow-xl relative z-20">
+      <div class="animate-ticker">
+          <!-- Content Set 1 -->
+          <div class="flex items-center space-x-12 px-6">
+              <span class="text-white font-extrabold text-xl md:text-2xl uppercase tracking-tighter flex items-center">
+                  <i data-lucide="bar-chart-3" class="w-6 h-6 mr-3 custom-orange-text"></i> Microsoft Power BI
+              </span>
+              <span class="text-gray-600 font-bold text-2xl">/</span>
+              <span class="text-white font-extrabold text-xl md:text-2xl uppercase tracking-tighter flex items-center">
+                  <i data-lucide="pie-chart" class="w-6 h-6 mr-3 custom-orange-text"></i> Google Looker Studio
+              </span>
+              <span class="text-gray-600 font-bold text-2xl">/</span>
+              <span class="text-white font-extrabold text-xl md:text-2xl uppercase tracking-tighter flex items-center">
+                  <i data-lucide="code-2" class="w-6 h-6 mr-3 custom-orange-text"></i> Python via AI
+              </span>
+              <span class="text-gray-600 font-bold text-2xl">/</span>
+          </div>
+          <!-- Content Set 2 (Duplicate for seamless scroll) -->
+          <div class="flex items-center space-x-12 px-6">
+              <span class="text-white font-extrabold text-xl md:text-2xl uppercase tracking-tighter flex items-center">
+                  <i data-lucide="bar-chart-3" class="w-6 h-6 mr-3 custom-orange-text"></i> Microsoft Power BI
+              </span>
+              <span class="text-gray-600 font-bold text-2xl">/</span>
+              <span class="text-white font-extrabold text-xl md:text-2xl uppercase tracking-tighter flex items-center">
+                  <i data-lucide="pie-chart" class="w-6 h-6 mr-3 custom-orange-text"></i> Google Looker Studio
+              </span>
+              <span class="text-gray-600 font-bold text-2xl">/</span>
+              <span class="text-white font-extrabold text-xl md:text-2xl uppercase tracking-tighter flex items-center">
+                  <i data-lucide="code-2" class="w-6 h-6 mr-3 custom-orange-text"></i> Python via AI
+              </span>
+              <span class="text-gray-600 font-bold text-2xl">/</span>
+          </div>
+          <!-- Content Set 3 (Buffer) -->
+          <div class="flex items-center space-x-12 px-6">
+              <span class="text-white font-extrabold text-xl md:text-2xl uppercase tracking-tighter flex items-center">
+                  <i data-lucide="bar-chart-3" class="w-6 h-6 mr-3 custom-orange-text"></i> Power BI
+              </span>
+              <span class="text-gray-600 font-bold text-2xl">/</span>
+              <span class="text-white font-extrabold text-xl md:text-2xl uppercase tracking-tighter flex items-center">
+                  <i data-lucide="pie-chart" class="w-6 h-6 mr-3 custom-orange-text"></i> Google Looker Studio
+              </span>
+              <span class="text-gray-600 font-bold text-2xl">/</span>
+              <span class="text-white font-extrabold text-xl md:text-2xl uppercase tracking-tighter flex items-center">
+                  <i data-lucide="code-2" class="w-6 h-6 mr-3 custom-orange-text"></i> Python via AI
+              </span>
+              <span class="text-gray-600 font-bold text-2xl">/</span>
           </div>
       </div>
-    </section>
+  </div>
 
   <main class="bg-gray-50">
     <div class="container mx-auto px-6 py-12 md:py-20">
@@ -174,8 +224,9 @@
             <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Choose Your Workshop Date</h2>
             <p class="text-gray-600 mt-2">Seats are limited and fill up fast. Book now to guarantee your spot.</p>
         </div>
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-white p-6 rounded-xl shadow-lg border-2 custom-orange-border transform hover:scale-105 transition-transform duration-300 md:col-span-2">
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Date 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border-2 custom-orange-border transform hover:scale-105 transition-transform duration-300">
                 <div class="text-center">
                     <p class="text-lg font-semibold text-gray-500">7-8 February, 2026</p>
                     <p class="font-bold text-2xl text-gray-800 mb-1">Saturday & Sunday</p>
@@ -186,7 +237,7 @@
                     </div>
                     <div class="flex justify-between items-center text-sm mb-4">
                         <p class="font-bold custom-orange-text flex items-center"><i data-lucide="calendar-plus" class="w-4 h-4 mr-1"></i>Registration Open!</p>
-                        <p class="text-gray-500">Early bird pricing available</p>
+                        <p class="text-gray-500 text-xs">Early bird pricing available</p>
                     </div>
 
                     <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="inline-block w-full custom-orange-bg hover:custom-orange-bg-dark text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all">
@@ -194,7 +245,43 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Date 2 (New) -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 card-hover transform hover:scale-105 transition-transform duration-300">
+                <div class="text-center">
+                    <p class="text-lg font-semibold text-gray-500">23-24 April, 2026</p>
+                    <p class="font-bold text-2xl text-gray-800 mb-1">Thursday & Friday</p>
+                    <p class="text-lg text-gray-600 mb-4 font-medium">Venue TBC</p>
+                    
+                    <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
+                        <div class="bg-gray-300 h-4 rounded-full" style="width: 5%"></div>
+                    </div>
+                    <div class="flex justify-between items-center text-sm mb-4">
+                        <p class="font-bold text-gray-500 flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-1"></i>Enrolment Starting Soon</p>
+                        <p class="text-gray-400 text-xs">Limited Capacity</p>
+                    </div>
+
+                    <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all">
+                        Join Waitlist
+                    </a>
+                </div>
+            </div>
         </div>
+      </section>
+
+      <!-- Trusted By Section (Social Proof after Dates) -->
+      <section id="trusted-by" class="mb-20">
+          <div class="container mx-auto px-6">
+              <h3 class="text-center text-gray-600 text-sm font-bold uppercase tracking-wider mb-8">Powering industry leaders with future-ready skills</h3>
+              <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-8">
+                  <img src="https://asset.brandfetch.io/idSUi3_8n5/id50s9j_7Y.svg" alt="HongLeong Bank Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+                  <img src="https://cdn.brandfetch.io/idBvD8kBit/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667603006186" alt="Shell Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/27/Tenaga_Nasional_Logo.svg/250px-Tenaga_Nasional_Logo.svg.png" alt="Tenaga Nasional Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Microsoft_logo.svg/2560px-Microsoft_logo.svg.png" alt="Microsoft Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/MDEC_logo.png" alt="MDEC Logo" class="h-10 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Employees_Provident_Fund_%28Malaysia%29_logo.svg/1200px-Employees_Provident_Fund_%28Malaysia%29_logo.svg.png" alt="EPF Logo" class="h-8 w-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              </div>
+          </div>
       </section>
 
       <!-- Bento Visualisation Section -->
